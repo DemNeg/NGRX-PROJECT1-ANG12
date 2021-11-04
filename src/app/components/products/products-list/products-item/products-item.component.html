@@ -1,23 +1,23 @@
-<tr>
-  <td>{{p.id}}</td>
-  <td>{{p.name}}</td>
-  <td>{{p.price}}</td>
-  <td>{{p.quantity}}</td>
-  <td>{{p.selected}}</td>
-  <td>{{p.available}}</td>
+<tr *ngIf="product">
+  <td>{{product.id}}</td>
+  <td>{{product.name}}</td>
+  <td>{{product.price}}</td>
+  <td>{{product.quantity}}</td>
+  <td>{{product.selected}}</td>
+  <td>{{product.available}}</td>
   <td>
-    <button (click)="onSelect(p)" [ngClass]="p.selected?'btn-success':'btn-danger'" class="btn btn-sm">
-      <div *ngIf="p.selected"><strong>UNSELECT</strong></div>
-      <div *ngIf="!p.selected"><strong>SELECT</strong></div>
+    <button (click)="onSelect(product)" [ngClass]="product.selected?'btn-success':'btn-danger'" class="btn btn-sm">
+      <div *ngIf="product.selected"><strong>UNSELECT</strong></div>
+      <div *ngIf="!product.selected"><strong>SELECT</strong></div>
     </button>
   </td>
   <td>
-    <button class="btn btn-danger" (click)="onDeleteProduct(p)">
+    <button class="btn btn-danger" (click)="onDeleteProduct(product)">
       <span class="fa fa-trash-o"></span>
     </button>
   </td>
   <td>
-    <button class="btn btn-info" (click)="onEditProduct(p)">
+    <button class="btn btn-info" (click)="onEditProduct(product)">
       <span class="fa fa-edit"></span>
     </button>
   </td>

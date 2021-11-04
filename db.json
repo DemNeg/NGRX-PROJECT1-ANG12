@@ -1,22 +1,6 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "computer",
-      "price": "500",
-      "quantity": "10",
-      "selected": false,
-      "available": "false"
-    },
-    {
-      "id": 2,
-      "name": "Phone",
-      "price": "600",
-      "quantity": "15",
-      "selected": true,
-      "available": "true"
-    },
-    {
       "name": "Imprimante",
       "price": "1200",
       "quantity": "5",
@@ -25,19 +9,19 @@
       "id": 3
     },
     {
-      "name": "Cahier",
+      "id": 4,
+      "name": "Cahier bloc note",
       "price": "10",
       "quantity": "23",
       "selected": false,
-      "available": true,
-      "id": 4
+      "available": false
     },
     {
       "id": 5,
-      "name": "Scanner 200",
+      "name": "Sac à main",
       "price": "200",
-      "quantity": "23",
-      "selected": true,
+      "quantity": "15",
+      "selected": false,
       "available": true
     }
   ]

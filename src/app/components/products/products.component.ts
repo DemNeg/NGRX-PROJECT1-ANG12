@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ProductsService} from "../../services/products.service";
 import {Product} from "../../model/product.model";
 import {Observable, of} from "rxjs";
 import {catchError, map, startWith} from "rxjs/operators";
-import {AppDataState, DataStateEnum} from "../../State/product.State";
+import {ActionEvent, AppDataState, DataStateEnum, ProductsActionsTypes} from "../../State/product.State";
 import {Router} from "@angular/router";
+import {$e} from "@angular/compiler/src/chars";
 
 @Component({
   selector: 'app-products',
@@ -121,5 +122,21 @@ export class ProductsComponent implements OnInit {
 
   onEditProduct(p: Product) {
     this.router.navigateByUrl("/editProduct/"+p.id)
+  }
+
+  onActionEvent($event: ActionEvent) {
+
+    switch ($event.type){
+
+      case ProductsActionsTypes.GET_ALL_PRODUCTS : this.onGetAllProducts(); break;
+      case ProductsActionsTypes.GET_SELECTED_PRODUCTS : this.onGetSelectedProducts(); break;
+      case ProductsActionsTypes.GET_AVAILABLE_PRODUCTS : this.onGetAvailableProducts(); break;
+      case ProductsActionsTypes.SEARCH_PRODUCTS : this.onSearch($event.payload); break;
+      case ProductsActionsTypes.NEW_PRODUCTS : this.onNewProduct(); break;
+      case ProductsActionsTypes.SELECT_PRODUCTS : this.onSelect($event.payload); break;
+      case ProductsActionsTypes.DELETE_PRODUCTS : this.onDeleteProduct($event.payload); break;
+      case ProductsActionsTypes.EDIT_PRODUCTS : this.onEditProduct($event.payload); break;
+    }
+
   }
 }
