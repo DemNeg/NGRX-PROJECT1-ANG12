@@ -4,16 +4,16 @@
       "name": "Imprimante",
       "price": "1200",
       "quantity": "5",
-      "selected": true,
+      "selected": false,
       "available": true,
       "id": 3
     },
     {
       "id": 4,
       "name": "Cahier bloc note",
-      "price": "10",
+      "price": "100",
       "quantity": "23",
-      "selected": false,
+      "selected": true,
       "available": false
     },
     {
@@ -23,6 +23,22 @@
       "quantity": "15",
       "selected": false,
       "available": true
+    },
+    {
+      "name": "Porte en fer",
+      "price": "20",
+      "quantity": "55",
+      "selected": true,
+      "available": true,
+      "id": 6
+    },
+    {
+      "name": "Brochure",
+      "price": "15",
+      "quantity": "2",
+      "selected": false,
+      "available": true,
+      "id": 7
     }
   ]
 }

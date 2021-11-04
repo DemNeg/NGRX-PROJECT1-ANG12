@@ -14,7 +14,6 @@
           <th>ID</th><th>NAME</th><th>PRICE</th><th>QUANTITY</th><th>SELECTED</th><th>AVAILABLE</th>
         </tr>
         <app-products-item *ngFor="let p of result.data" [product]="p"
-                           (eventEmitter)="onActionEvent($event)"
                           style="display: contents">
 
         </app-products-item>
